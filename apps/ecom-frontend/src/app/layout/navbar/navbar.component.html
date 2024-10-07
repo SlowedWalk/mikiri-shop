@@ -1,0 +1,49 @@
+<div class="navbar bg-base-100">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <a [routerLink]="['/']" class="btn btn-ghost text-xl">
+        <div class="border-1 bg-secondary logo p-2 rounded-2xl">MIKIRI</div>
+      </a>
+    </div>
+  </div>
+  <div class="navbar-center flex">
+    <div class="menu menu-sm sm:menu-lg menu-horizontal px-1">
+      <li><a href="/">Home</a></li>
+      <li>
+        <details #productMenu>
+          <summary>Products</summary>
+          <ul class="z-30">
+            <li><a href="/products">all</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details #adminMenu>
+          <summary>Admin</summary>
+          <ul class="z-30">
+            <li><a href="/admin">all</a></li>
+            <li><a href="/admin1">all</a></li>
+            <li><a href="/admin2">all</a></li>
+          </ul>
+        </details>
+      </li>
+    </div>
+  </div>
+  <div class="navbar-end pe-4 flex items-center">
+    <div class="dropdown dropdown-end pe-4">
+      <div tabindex="0" role="button">
+        <fa-icon [icon]="['fas', 'user']" class="menu-icon"></fa-icon>
+      </div>
+      <ul class="dropdown-content menu menu-lg bg-base-100 rounded-box z-10 w-52 p22 shadow">
+        <li>
+          <button class="link link-hover">Login</button>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown dropdown-end me-2" [routerLink]="['/card']">
+      <div tabindex="0" role="button">
+        <fa-icon [icon]="['fas', 'cart-shopping']" class="menu-icon"></fa-icon>
+      </div>
+    </div>
+  </div>
+</div>
